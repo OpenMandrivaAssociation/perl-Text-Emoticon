@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.04
-Release:	10
+Release:	1
 
 Summary:	Factory class for Yahoo! and MSN emoticons
 License:	GPL+ or Artistic
@@ -27,18 +27,18 @@ plugins.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
+%make_build
 %check
 # soft: do not fail package on test failures
 set +e
+make test || :
 %make test || :
 
 %install
 %makeinstall_std
 
 %files
-%doc Changes
+%doc Changes META.yml
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 
