@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.04
-Release:	4
+Release:	5
 
 Summary:	Factory class for Yahoo! and MSN emoticons
 License:	GPL+ or Artistic
